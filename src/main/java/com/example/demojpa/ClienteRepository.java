@@ -1,4 +1,8 @@
+package com.example.demojpa;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+
+
 import java.util.List;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Long>{
@@ -7,7 +11,7 @@ public interface ClienteRepository extends JpaRepository<Cliente, Long>{
 
     Cliente findByNombre(String nombre);
 
-    void deledeleteByNombre(String nombre);
+    void deleteByNombre(String nombre);
 
     
 }
