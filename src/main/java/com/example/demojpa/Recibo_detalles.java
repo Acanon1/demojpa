@@ -1,5 +1,6 @@
 package com.example.demojpa;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,18 +15,21 @@ import jakarta.persistence.Table;
 public class Recibo_detalles {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "recibo_detalles_id")
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "Recibo_id")
+    @JoinColumn(name = "recibo_id")
     private Recibo recibo;
 
+    @Column(name = "recibo_detalles_monto")
     private int monto;
 
     @ManyToOne
-    @JoinColumn(name = "Producto_Id")
+    @JoinColumn(name = "producto_id")
     private Producto producto;
 
+    @Column(name = "recibo_detalles_precio")
     private double precio;
 
     public Long getId() {

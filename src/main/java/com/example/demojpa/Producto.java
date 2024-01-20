@@ -1,5 +1,6 @@
 package com.example.demojpa;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,10 +12,19 @@ import jakarta.persistence.Table;
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "producto_id")
     private Long id;
+
+    @Column(name = "producto_descripcion")
     private String descripcion;
+
+    @Column(name = "producto_codigo")
     private String codigo;
+
+    @Column(name = "producto_stock")
     private int stock;
+    
+    @Column(name = "producto_precio")
     private double precio;
 
 

@@ -1,5 +1,6 @@
 package com.example.demojpa;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,15 +18,19 @@ import java.util.Date;
 public class Recibo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "recibo_id")
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "Cliente_Id")
+    @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
 
     @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "recibo_creacion")
     private Date creacion;
+
+    @Column(name = "recibo_total")
     private double total;
 
 
