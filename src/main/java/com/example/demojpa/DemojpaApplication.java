@@ -17,7 +17,7 @@ public class DemojpaApplication {
 		return args -> {
 			Cliente cliente1 = new Cliente();
 			cliente1.setNombre("Juan");
-			cliente1.setEmail("jueam@example.com");
+			cliente1.setApellido("vnrer");
 			clienteRepository.save(cliente1);
 
 			System.out.println("todos los clientes: ");
