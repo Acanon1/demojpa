@@ -2,7 +2,7 @@ package com.example.demojpa;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
-
+// ientidad cliente
 import java.util.List;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Long>{
